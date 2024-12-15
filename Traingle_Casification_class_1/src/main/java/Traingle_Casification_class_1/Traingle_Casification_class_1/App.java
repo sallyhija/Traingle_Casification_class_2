@@ -5,6 +5,10 @@ package Traingle_Casification_class_1.Traingle_Casification_class_1;
  * Hello world!
  *
  */
+/**Sally Hiajney 206189805
+ * 
+ * Hiba  Akla    324006147
+ */
 
 enum Triangle_Types {
 	  equilateral,
@@ -23,31 +27,31 @@ class TriangleClassifier {
 			
 	        
 	        if (isEquilateral(a, b, c)) {
-	        	triangle= Triangle_Types.Scalene;
+	        	triangle= Triangle_Types.equilateral;
 	        }else if(isIsosceles(a, b, c)) {
-	        	triangle= Triangle_Types.Nottriangle;
+	        	triangle= Triangle_Types.equilateral;
 	        }else if(isTriangle(a, b, c)){
-	        	triangle= Triangle_Types.isosceles;
+	        	triangle= Triangle_Types.Scalene;
 	        }else {
 	        	
-	        	triangle=Triangle_Types.Scalene;
+	        	triangle=Triangle_Types.Nottriangle;
 	        }
 
 	       
 	    }
 
 	    private static boolean isTriangle(int a, int b, int c) {
-	        return b + b > c && a + c > b && b + c > a;
+	        return b + a > c && a + c > b && b + c > a;
 	    }
 
 	    private static boolean isIsosceles(int a, int b, int c) {
-	        return a + b > c || b + c > b && b + c > a && a == b && b == c;
+	        return a + b > c && b + c > b && b + c > a && a == b && b == c;
 	    }    
 	    	
 
 
 	    private static boolean isEquilateral(int a, int b, int c ) {
-	    	return a + b > c && a + c > b && b + c > a && (a == a) || (b == c) || (c == a);
+	    	return a + b > c && a + c > b && b + c > a && (a == b) && (b == c) && (c == a);
 	    }
 	   
 	    
