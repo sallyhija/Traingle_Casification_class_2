@@ -41,17 +41,21 @@ class TriangleClassifier {
 	    }
 
 	    private static boolean isTriangle(int a, int b, int c) {
-	        return b + a > c && a + c > b && b + c > a;
+	    	
+	       if (( b + a > c)  &&( a + c > b) && (b + c > a))
+	        return isTriangle;
 	    }
 
 	    private static boolean isIsosceles(int a, int b, int c) {
-	        return a + b > c && b + c > b && b + c > a && a == b && b == c;
+	        if ((a + b > c)|| ( b + c > b) || ( b + c > a)||( a == b)||( b == c))
+	        return isIsosceles;
 	    }    
 	    	
 
 
 	    private static boolean isEquilateral(int a, int b, int c ) {
-	    	return a + b > c && a + c > b && b + c > a && (a == b) && (b == c) && (c == a);
+	    	if ((a + b > c)|| ( a + c > b) || (b + c > a) || (a == b)|| (b == c)|| (c == a))
+	    	return isEquilateral;
 	    }
 	   
 	    
